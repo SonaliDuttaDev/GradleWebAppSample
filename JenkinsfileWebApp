@@ -11,5 +11,10 @@ pipeline {
 				sh 'gradle build'
 			}
 		}
+		stage ('deploy') {
+			steps {
+				sh 'sudo cp web/build/libs/web.war /opt/tomcat/apache-tomcat-8.5.37/webapps/
+			}
+		}		
 	}
 }
