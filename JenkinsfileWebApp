@@ -2,13 +2,13 @@ pipeline {
     
 	agent any
 	tools {
-		gradle 'Gradle5.2.1'
+		gradle 'DefaultGradle'
 		jdk 'Java1.8.0'
 	}
 	stages {
 		stage('Build') {
 			steps {
-				sh './gradlew clean build'
+				sh 'gradle build'
 			}
 		}
 	}
